@@ -1,0 +1,12 @@
+{{ define "content" }}
+	<h2>User page</h2>
+	<pre>
+		UA: {{ .UserAgent }}
+		{{ .Path }}
+	</pre>
+	<ul>
+		{{ range .Loop }}
+			<li>{{ .Name }} => {{ .Href }}</li>
+		{{ end }}
+	</ul>
+{{ end }}
